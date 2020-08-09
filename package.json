@@ -1,0 +1,14 @@
+{
+  "name": "nhmeow-blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "docs:dev": "vuepress dev .",
+    "docs:build": "vuepress build ."
+  },
+  "devDependencies": {
+    "@vuepress/plugin-blog": "^1.9.2",
+    "vuepress": "^1.5.3"
+  }
+}
