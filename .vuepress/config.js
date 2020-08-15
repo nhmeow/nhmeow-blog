@@ -15,9 +15,9 @@ module.exports = {
                 ],
                 frontmatters: [
                     {
-                        id: "tag",
-                        keys: ['tag', 'tags', 'category'],
-                        path: '/categories/',
+                        id: "category",
+                        keys: ['tag', 'tags', 'category', 'features', 'feature'],
+                        path: '/category/',
                     },
                 ],
                 globalPagination: {
@@ -26,4 +26,12 @@ module.exports = {
             },
         ],
     ],
+    postcss: {
+        plugins: [
+            // ...
+            require('tailwindcss'),
+            require('autoprefixer'),
+            // ...
+        ]
+    }
 }
