@@ -25,10 +25,12 @@ module.exports = {
                 },
             },
         ],
-        '@vuepress/google-analytics',
-        {
-            'ga': 'UA-176049039-1'
-        },
+        [
+            '@vuepress/google-analytics',
+            {
+                'ga': 'UA-176049039-1'
+            },
+        ],
     ],
     postcss: {
         plugins: [
