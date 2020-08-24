@@ -31,6 +31,9 @@ module.exports = {
                 'ga': 'UA-176049039-1'
             },
         ],
+        [
+            '@vuepress/nprogress', {}
+        ],
     ],
     postcss: {
         plugins: [
