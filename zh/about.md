@@ -46,7 +46,7 @@ lang: en-US
 
 ### 版权
 
-- 请勿酱任何插图用于商业用途，转载请署名
+- 请勿将任何插图用于商业用途，转载请署名
 - 所有的博客文章的协议均是 [署名-相同方式共享 4.0 国际 (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/deed.zh)
 
 ### 杂项

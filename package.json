@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "CC-BY-SA-4.0",
+  "homepage": "https://nhmeow.github.io/",
   "scripts": {
     "dev": "vuepress dev .",
     "build": "vuepress build ."

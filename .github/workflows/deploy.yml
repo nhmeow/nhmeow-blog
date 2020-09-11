@@ -19,9 +19,9 @@ jobs:
           npm install yarn -g
           yarn install
           yarn run build
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         env:
-          GH_TOKEN: ${{ secrets.ACTION_TOKEN }}
+          ACTION_TOKEN: ${{ secrets.ACTION_TOKEN }}
         run: |
           cp CNAME .vuepress/dist/
           cp README.md .vuepress/dist/
@@ -34,4 +34,4 @@ jobs:
           git config user.name "Barren Cat"
           git add -A
           git commit -m "GitHub Actions Deploy"
-          git push -f https://github.com/nhmeow/nhmeow.github.io.git master
+          git push -f https://$ACTION_TOKEN@github.com/nhmeow/nhmeow.github.io.git master
