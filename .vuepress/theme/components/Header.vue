@@ -33,6 +33,7 @@
         -webkit-text-fill-color: transparent;
         text-fill-color: transparent;
         text-align: center;
+        letter-spacing: 2px;
     }
 
     header h1:hover {

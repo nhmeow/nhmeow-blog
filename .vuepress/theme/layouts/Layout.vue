@@ -86,6 +86,8 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
             text-fill-color: transparent;
+            letter-spacing: 3px;
+            text-shadow: 3px 3px 10px rgb(238, 44, 130);
         }
     }
 </style>
