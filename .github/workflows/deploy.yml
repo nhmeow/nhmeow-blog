@@ -1,0 +1,36 @@
+on:
+  push:
+    branches:
+      - master
+name: Deploy WebSite
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+      - uses: actions/checkout@master
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v1.4.3
+        with:
+          node-version: 12.x
+      - name: Build
+        run: |
+          npm install yarn -g
+          yarn install
+          yarn run build
+      - name: Deploy to GitHub Pages
+        env:
+          GH_TOKEN: ${{ secrets.ACTION_TOKEN }}
+        run: |
+          cp CNAME .vuepress/dist/
+          cp README.md .vuepress/dist/
+          cp LICENSE.md .vuepress/dist/
+          cd .vuepress/dist
+          rm -rf LICENSE.html
+          rm -rf README.html
+          git init
+          git config user.email "cat@meowy.org"
+          git config user.name "Barren Cat"
+          git add -A
+          git commit -m "GitHub Actions Deploy"
+          git push -f https://github.com/nhmeow/nhmeow.github.io.git master
