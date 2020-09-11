@@ -3,21 +3,21 @@ title: About
 lang: en-US
 ---
 
-## Barren Cat
+## 南荒喵
 
-### Bio
-- a cat
-- loves work and study, and is the favorite cat of fruit shop owners
+### 简介
+- 是一只猫
+- 热爱工作与学习，是水果店老板最喜欢的猫猫
 
-### Email
+### 邮箱
 - [nhmeow@outlook.com](mailto:nhmeow@outlook.com) (master)
 - [nhmiao@outlook.com](mailto:nhmiao@outlook.com)
 
-### Stickers
+### 表情包
 - [nhmiao](https://t.me/addstickers/nhmiao) 
 - [nhmeow](https://t.me/addstickers/nhmeow) (updating)
 
-### Platform
+### 活动平台
 - telegram: [@nhnotice](https://t.me/nhnotice) 
 - twitter: [@nhmiao](https://twitter.com/nhmiao) 
 - pixiv: [55522166](https://pixiv.net/users/55522166) 
@@ -25,29 +25,29 @@ lang: en-US
 - bilibili: [32597774](https://space.bilibili.com/32597774) 
 - github: [nhmeow](https://github.com/nhmeow)
 
-### Instant Messaging
+### 即时通讯
 - telegram: [@nhfans](https://t.me/nhfans)
 - discord: [BarrenCat](https://discord.gg/Yy82NY3)
 - qq group: [151333132](https://jq.qq.com/?_wv=1027&k=Kktvwx3Y)
 
-### Game
+### 游戏
 - Minecraft
 - Terraria
 
-### Sponsor
+### 赞助
 - patreon: [nhmeow](https://www.patreon.com/nhmeow) (imperfect)
 - afdian: [@nhmeow](https://afdian.net/@nhmeow)
 
-## Site
+## 网站
 
-### Source
+### 源码
 
-- github: [https://github.com/nhmeows/nhmeow-blog](https://github.com/nhmeow/nhmeow-blog)
+- github: [https://github.com/nhmeow/nhmeow-blog](https://github.com/nhmeow/nhmeow-blog)
 
-### Copyright
+### 版权
 
-- Please do not use illustrations for commercial purposes, reprints must be signed.
-- All the posts here are licensed under a [Creative Commons Attribution Share Alike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/)
+- 请勿酱任何插图用于商业用途，转载请署名
+- 所有的博客文章的协议均是 [署名-相同方式共享 4.0 国际 (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/deed.zh)
 
-### Misc
-- This website is made by Sobte
+### 杂项
+- 此网站是由 Sobte 所编写
