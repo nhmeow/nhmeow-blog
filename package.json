@@ -1,12 +1,23 @@
 {
   "name": "nhmeow-blog",
   "version": "1.0.0",
+  "description": "Barren Cat's Blog",
   "main": "index.js",
+  "author": {
+    "name": "Barren Cat",
+    "email": "cat@meowy.org",
+    "url": "https://barren.cat"
+  },
   "license": "CC-BY-SA-4.0",
   "homepage": "https://nhmeow.github.io/",
+  "bugs": {
+    "url": "https://github.com/nhmeow/nhmeow-blog/issues",
+    "email": "nhmeow@outlook.com"
+  },
   "scripts": {
     "dev": "vuepress dev .",
-    "build": "vuepress build ."
+    "build": "vuepress build .",
+    "post": "node ./scripts/post.js"
   },
   "dependencies": {
     "moment": "^2.27.0",

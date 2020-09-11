@@ -1,6 +1,6 @@
 module.exports = {
     title: 'Barren Cat',
-    description: 'Barren Cat Blog',
+    description: 'Barren Cat\'s Blog',
     head: [
         ['link', {rel: 'icon', href: '/logo.png'}],
         ['meta', {name: 'keywords', content: 'BarrenCat,南荒喵,南荒,Blog,博客'}]
