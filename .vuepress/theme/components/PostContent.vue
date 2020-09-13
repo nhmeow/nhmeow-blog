@@ -26,6 +26,10 @@
 </template>
 
 <style>
+    .article {
+        word-break: break-word;
+    }
+
     .article .article-meta {
         text-align: center;
         margin-bottom: 2rem;
@@ -83,6 +87,11 @@
         text-align: center;
         font-size: 2rem;
         margin-bottom: 22px;
+        letter-spacing: 2px;
+    }
+
+    .mode-dark .article h1 {
+        /*text-shadow: 0 0 10px orangered;*/
     }
 
     .article h1:hover {

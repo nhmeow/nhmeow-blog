@@ -71,7 +71,7 @@
     }
 
     .home-content span {
-        animation: home 1s forwards;
+        animation: home 1s forwards .5s;
         display: inline-block;
     }
 

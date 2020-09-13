@@ -94,6 +94,7 @@
 
     .post-content {
         padding: 1rem;
+        word-break: break-word;
     }
 
     .post-link {
