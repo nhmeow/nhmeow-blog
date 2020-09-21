@@ -108,12 +108,10 @@
             Footer,
             PostContent,
         },
-        data() {
-            return {
-                max: false,
-                mode: 'dark'
-            }
-        },
+        data: () => ({
+            max: false,
+            mode: 'dark'
+        }),
         mounted() {
             this.max = this.$el.offsetHeight > window.screen.height
         },

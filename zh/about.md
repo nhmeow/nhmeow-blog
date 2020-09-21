@@ -30,6 +30,10 @@ lang: en-US
 - discord: [BarrenCat](https://discord.gg/Yy82NY3)
 - qq group: [151333132](https://jq.qq.com/?_wv=1027&k=Kktvwx3Y)
 
+### 匿名提问
+- marshmallow: [nhmiao](https://marshmallow-qa.com/nhmiao)
+- peing: [nhmeow](https://peing.net/zh-CN/nhmeow)
+
 ### 游戏
 - Minecraft
 - Terraria

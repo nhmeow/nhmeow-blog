@@ -71,14 +71,12 @@
 <script>
     export default {
         name: 'Header',
-        data() {
-            return {
-                localeConfig: [
-                    '/', '/zh/', '/ca/'
-                ],
-                localeNext: '/zh/'
-            }
-        },
+        data: () => ({
+            localeConfig: [
+                '/', '/zh/', '/ca/'
+            ],
+            localeNext: '/zh/'
+        }),
         computed: {
             modeDisplay() {
                 return this.$themeLocaleConfig.themeColor[this.$parent.mode]

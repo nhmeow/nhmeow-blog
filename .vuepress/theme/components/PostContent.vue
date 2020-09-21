@@ -193,12 +193,12 @@
         padding: .5rem 1rem;
         color: #70747b;
         border-left: .25rem solid #848484;
+        background-color: rgba(0, 0, 0, .1);
     }
 
     .mode-dark .article blockquote {
         color: floralwhite;
         border-left: .25rem solid coral;
-        background-color: rgba(0, 0, 0, .1);
     }
 
     .article blockquote > p {

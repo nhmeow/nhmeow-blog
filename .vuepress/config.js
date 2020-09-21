@@ -3,7 +3,7 @@ module.exports = {
     description: 'Barren Cat\'s Blog',
     head: [
         ['link', {rel: 'icon', href: '/logo.png'}],
-        ['meta', {name: 'keywords', content: 'BarrenCat,南荒喵,南荒,Blog,博客'}]
+        ['meta', {name: 'keywords', content: 'BarrenCat,南荒喵,南荒,Blog,博客,vtuber,vup,虚拟偶像,二次元,纸片人'}]
     ],
     plugins: [
         [
@@ -70,12 +70,12 @@ module.exports = {
         '/': {
             lang: 'en-US',
             title: 'Barren Cat',
-            description: 'Barren Cat Blog'
+            description: 'Barren Cat Blog, A vtuber’s daily life, it’s okay to be anime, painting, and ideas'
         },
         '/zh/': {
             lang: 'zh-CN',
             title: '南荒喵',
-            description: '南荒喵的博客'
+            description: '南荒喵的博客，一个vtuber的日常，没事会水水动漫，作画，以及想法'
         },
         '/ca/': {
             lang: 'ca',
