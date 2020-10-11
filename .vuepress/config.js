@@ -3,7 +3,11 @@ module.exports = {
     description: 'Barren Cat\'s Blog',
     head: [
         ['link', {rel: 'icon', href: '/logo.png'}],
-        ['meta', {name: 'keywords', content: 'BarrenCat,南荒喵,南荒,Blog,博客,vtuber,vup,虚拟偶像,二次元,纸片人'}]
+        ['meta', {name: 'keywords', content: 'BarrenCat,南荒喵,南荒,Blog,博客,vtuber,vup,虚拟偶像,二次元,纸片人'}],
+        ['script', {
+            'data-ad-client': 'ca-pub-5865757801728046',
+            'src': 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+        }]
     ],
     plugins: [
         [
