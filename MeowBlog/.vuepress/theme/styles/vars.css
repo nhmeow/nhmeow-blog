@@ -1,0 +1,14 @@
+:root {
+    /* NProgress Color */
+    --nprogress-color: orange;
+    --nprogress-z-index: 1031;
+
+    --c-brand: orange;
+    --c-brand-light: #ff9e00;
+
+    --c-bg: #fff5f7;
+}
+
+.mode-dark {
+    --c-bg: #2c3e50;
+}

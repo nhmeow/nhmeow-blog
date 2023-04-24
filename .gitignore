@@ -96,7 +96,7 @@ dist
 # public
 
 # vuepress build output
-.vuepress/dist
+MeowBlog/.vuepress/dist
 
 # Serverless directories
 .serverless/
@@ -120,3 +120,7 @@ dist
 .yarn/build-state.yml
 .pnp.*
 
+.temp
+
+# obsidian
+.obsidian

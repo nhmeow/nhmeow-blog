@@ -1,0 +1,54 @@
+// scrollbar
+::-webkit-scrollbar
+  width 5px !important
+  height 5px !important
+
+
+::-webkit-scrollbar-track
+  background 0 0 !important
+
+
+::-webkit-scrollbar-thumb
+  background #aaa
+  border-radius 3px
+
+
+::-webkit-scrollbar-thumb:hover
+  background #888
+
+
+// selection
+::selection
+  background orange
+  color #fff5f7
+  -webkit-text-fill-color: #fff5f7;
+  text-fill-color: #fff5f7;
+
+// animation
+@keyframes gradient-move
+  0%
+    background-size 10rem
+
+  100%
+    background-size 10rem
+    background-position 10rem 0
+
+
+:root
+  word-break break-all
+
+:root:before
+  content " "
+  top 0
+  bottom 0
+  left 0
+  right 0
+  position fixed
+  z-index -1
+  opacity .07
+  filter invert(100%)
+  background url('/background.svg') 50%
+  background-size 400px auto
+
+body
+  background none
