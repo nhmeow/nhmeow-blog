@@ -16,9 +16,12 @@ jobs:
         with:
           node-version: 18.x
           cache: 'npm'
+      - name: Setup pnpm environment
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
       - name: Build
         run: |
-          npm install pnpm -g
           pnpm install
           pnpm run build
       - name: Deploy
