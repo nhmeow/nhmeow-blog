@@ -1,8 +1,10 @@
+name: Deploy WebSite
+
 on:
   push:
     branches:
       - master
-name: Deploy WebSite
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -13,22 +15,21 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v1.4.3
         with:
-          node-version: 12.x
+          node-version: 18.x
+          cache: 'npm'
       - name: Build
         run: |
-          npm install yarn -g
-          yarn install
-          yarn run build
+          npm install pnpm -g
+          pnpm install
+          pnpm run build
       - name: Deploy
         env:
           ACTION_TOKEN: ${{ secrets.ACTION_TOKEN }}
         run: |
-          cp CNAME .vuepress/dist/
-          cp README.md .vuepress/dist/
-          cp LICENSE.md .vuepress/dist/
-          cd .vuepress/dist
-          rm -rf LICENSE.html
-          rm -rf README.html
+          cp CNAME MeowBlog/.vuepress/dist/
+          cp README.md MeowBlog/.vuepress/dist/
+          cp LICENSE.md MeowBlog/.vuepress/dist/
+          cd MeowBlog/.vuepress/dist
           git init
           git config user.email "cat@meowy.org"
           git config user.name "Barren Cat"
