@@ -63,14 +63,21 @@ watch(mode, () => {
     color: #333;
     padding: 0 4em;
     max-width: 900px;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-header, .container-footer {
+    flex: 0 0 auto;
+}
+
+.content-section {
+    flex: 1;
 }
 
 .mode-dark .container {
     color: white;
-}
-
-.content-section {
-    min-height: 50vh;
 }
 
 @media screen and (max-width: 768px) {
@@ -80,11 +87,6 @@ watch(mode, () => {
         border-radius: unset;
         min-height: 100vh;
     }
-
-    .content-section {
-        min-height: 75vh;
-    }
-
 }
 
 a:hover {
