@@ -1,6 +1,6 @@
 <template>
     <div class="layout-box">
-        <section class="container">
+        <section :class="['container',pageFrontmatter.home?'':'post']">
             <Header :mode="mode" @mode-change="modeChange" class="container-header"/>
 
             <section class="content-section">
@@ -53,7 +53,7 @@ watch(mode, () => {
 <style>
 
 .layout-box {
-    min-height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,6 +66,10 @@ watch(mode, () => {
     min-height: 70vh;
     display: flex;
     flex-direction: column;
+}
+
+.container.post {
+    height: 100%;
 }
 
 .container-header, .container-footer {
@@ -85,7 +89,7 @@ watch(mode, () => {
         margin: 0 auto;
         padding: 0 1em;
         border-radius: unset;
-        min-height: 100vh;
+        height: 100%;
     }
 }
 

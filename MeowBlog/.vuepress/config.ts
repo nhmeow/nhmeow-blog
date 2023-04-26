@@ -10,7 +10,12 @@ export default defineUserConfig({
     description: 'Barren Cat\'s Blog',
     head: [
         ['link', {rel: 'icon', href: '/logo.png'}],
+        ['meta', {
+            name: 'viewport',
+            content: 'width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no'
+        }],
         ['meta', {name: 'keywords', content: 'BarrenCat,南荒喵,南荒,Blog,博客,vtuber,vup,虚拟偶像,二次元,纸片人'}],
+        ['meta', {name: 'theme-color', content: 'orange'}],
     ],
     plugins: [
         googleAnalyticsPlugin({
