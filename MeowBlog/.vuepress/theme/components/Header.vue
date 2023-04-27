@@ -76,7 +76,7 @@ const modeSwitch = () => {
 }
 
 const refresh = () => {
-    if (pageFrontmatter.value.supportCa) {
+    if (pageFrontmatter.value.home) {
         localeConfig.value = [
             '/', '/zh/', '/ca/'
         ];
