@@ -49,7 +49,7 @@ const modeDisplay = computed(() => {
 const localeNextPath = computed(() => {
     let path = router.currentRoute.value.path.replace(localePath.value, '');
     if (path.startsWith('category')) {
-        path = 'category';
+        path = 'category/';
     }
     return localeNext.value + path;
 })
