@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 
-import {pageData, usePageFrontmatter} from "@vuepress/client";
+import {usePageFrontmatter} from "vuepress/client";
 
 const pageFrontmatter = usePageFrontmatter();
 

@@ -26,7 +26,7 @@ jobs:
           cp LICENSE.md MeowBlog/.vuepress/dist/
           cd MeowBlog/.vuepress/dist
           git init
-          git config user.email "cat@meowy.org"
+          git config user.email "i@nhm.cat"
           git config user.name "Barren Cat"
           git add -A
           git commit -m "GitHub Actions Deploy"

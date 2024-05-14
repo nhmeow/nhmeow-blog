@@ -16,10 +16,11 @@
 
 
 <script setup lang="ts">
-import {pageData, useRouteLocale} from "@vuepress/client";
-import {useBlogCategory} from "vuepress-plugin-blog2/client";
+import {usePageData, useRouteLocale} from "vuepress/client";
+import {useBlogCategory} from '@vuepress/plugin-blog/client';
 import PostList from "./PostList.vue";
 
+const pageData = usePageData();
 const categoryMap = useBlogCategory("category");
 const routeLocale = useRouteLocale();
 

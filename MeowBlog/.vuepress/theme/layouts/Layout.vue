@@ -17,13 +17,13 @@
 
 <script setup lang="ts">
 import {onMounted, ref, watch} from "vue";
+import {usePageFrontmatter} from "vuepress/client";
 import Header from "../components/Header.vue";
-import Footer from "../components/Footer.vue";
-import PostContent from "../components/PostContent.vue";
-import {usePageFrontmatter} from "@vuepress/client";
 import Categories from "../components/Categories.vue";
-import Posts from "../components/Posts.vue";
 import Home from "../components/Home.vue";
+import PostContent from "../components/PostContent.vue";
+import Posts from "../components/Posts.vue";
+import Footer from "../components/Footer.vue";
 
 const mode = ref('dark');
 const pageFrontmatter = usePageFrontmatter();

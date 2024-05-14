@@ -1,9 +1,11 @@
-import {defineUserConfig, defaultTheme} from 'vuepress'
-import {googleAnalyticsPlugin} from "@vuepress/plugin-google-analytics";
-import {themeDataPlugin} from "@vuepress/plugin-theme-data";
-import anchor from "markdown-it-anchor";
-import {feedPlugin} from "vuepress-plugin-feed2";
-import {blogPlugin} from "vuepress-plugin-blog2";
+import {viteBundler} from '@vuepress/bundler-vite'
+import {defaultTheme} from '@vuepress/theme-default'
+import {defineUserConfig} from 'vuepress'
+import {googleAnalyticsPlugin} from "@vuepress/plugin-google-analytics"
+import {themeDataPlugin} from "@vuepress/plugin-theme-data"
+import anchor from "markdown-it-anchor"
+import {feedPlugin} from "@vuepress/plugin-feed"
+import {blogPlugin} from '@vuepress/plugin-blog'
 
 export default defineUserConfig({
     title: 'Barren Cat',
@@ -17,6 +19,8 @@ export default defineUserConfig({
         ['meta', {name: 'keywords', content: 'BarrenCat,南荒喵,南荒,Blog,博客,vtuber,vup,虚拟偶像,二次元,纸片人'}],
         ['meta', {name: 'theme-color', content: 'orange'}],
     ],
+    bundler: viteBundler(),
+    theme: defaultTheme(),
     plugins: [
         googleAnalyticsPlugin({
             id: 'G-Q5DCEP3J9T'
@@ -32,7 +36,7 @@ export default defineUserConfig({
                         },
                         navbar: [
                             {text: 'About', link: 'about'},
-                            {text: 'Posts', link: 'posts'},
+                            {text: 'Posts', link: 'posts/'},
                             {text: 'Build', link: 'build'},
                         ],
                         category: 'category',
@@ -45,7 +49,7 @@ export default defineUserConfig({
                         },
                         navbar: [
                             {text: '关于', link: 'about'},
-                            {text: '博文', link: 'posts'},
+                            {text: '博文', link: 'posts/'},
                             {text: '人设', link: 'build'},
                         ],
                         category: 'category_zh',
@@ -86,9 +90,9 @@ export default defineUserConfig({
 
             // generate excerpt for all pages excerpt those users choose to disable
             excerptFilter: ({frontmatter}) =>
-                !frontmatter["home"] &&
-                frontmatter["excerpt"] !== false &&
-                typeof frontmatter["excerpt"] !== "string",
+                !frontmatter.home &&
+                frontmatter.excerpt !== false &&
+                typeof frontmatter.excerpt !== 'string',
 
             category: [
                 {
@@ -100,7 +104,10 @@ export default defineUserConfig({
                         title: `Category: ${name}`,
                         categoriesLayout: true
                     }),
-                    frontmatter: () => ({title: "Categories", categoriesLayout: true}),
+                    frontmatter: () => ({
+                        title: "Categories",
+                        categoriesLayout: true
+                    }),
                 },
             ],
 
@@ -120,7 +127,7 @@ export default defineUserConfig({
                     }),
                 },
             ],
-        })
+        }),
     ],
     markdown: {
         anchor: {
@@ -148,5 +155,5 @@ export default defineUserConfig({
             description: 'Blog Gat Estèril',
         },
     },
-    permalinkPattern: ":year/:month/:day/:slug",
+    permalinkPattern: ":year/:month/:day/:slug/",
 })

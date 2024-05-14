@@ -17,13 +17,12 @@
 
 <script setup lang="ts">
 import {computed, onMounted, onUpdated, ref, toRefs} from 'vue';
-import {usePagesData, pageData, useRouteLocale, useSiteLocaleData, usePageFrontmatter} from "@vuepress/client";
+import {useRouteLocale, useSiteLocaleData, usePageFrontmatter} from "vuepress/client";
 import {useThemeLocaleData} from "@vuepress/theme-default/lib/client/index";
 import {useRouter} from "vue-router";
 
 const themeLocaleData = useThemeLocaleData();
 const pageFrontmatter = usePageFrontmatter();
-const pagesData = usePagesData();
 const siteLocaleData = useSiteLocaleData();
 const routeLocale = useRouteLocale();
 const router = useRouter();

@@ -12,9 +12,9 @@
 </template>
 
 <script setup lang="ts">
-import {useRouteLocale} from "@vuepress/client";
+import {useRouteLocale} from "vuepress/client"
 
-const routeLocale = useRouteLocale();
+const routeLocale = useRouteLocale()
 </script>
 
 <style scoped>

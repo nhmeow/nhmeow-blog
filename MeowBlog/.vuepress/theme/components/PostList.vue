@@ -17,7 +17,7 @@
                 <span>
                   <router-link class="post-category"
                                v-for="category in page.info.category"
-                               :to="`${routeLocale}category/${category}`">
+                               :to="`${routeLocale}category/${category}/`">
                       {{ category }}
                   </router-link>
                 </span>
@@ -29,7 +29,7 @@
 
 <script setup lang="ts">
 
-import {useRouteLocale} from "@vuepress/client";
+import {useRouteLocale} from "vuepress/client";
 
 const routeLocale = useRouteLocale();
 

@@ -7,7 +7,9 @@
                     <span>Time: {{ postTime }}</span>
                     <span>Category: <router-link class="article-category"
                                                  v-for="category in pageFrontmatter.category"
-                                                 :to="`${routeLocale}category/${category}`">{{ category }}</router-link>
+                                                 :to="`${routeLocale}category/${category}/`">{{
+                            category
+                        }}</router-link>
                 </span>
                 </div>
             </header>
@@ -18,22 +20,22 @@
                     <span class="comments-tips">Please describe rationally</span>
                 </h3>
                 <component
-                        v-if="renderComments"
-                        :is="'script'"
-                        src="https://giscus.app/client.js"
-                        data-repo="nhmeow/nhmeow-blog"
-                        data-repo-id="MDEwOlJlcG9zaXRvcnkyODYzMDI1MjE="
-                        data-category="Announcements"
-                        data-category-id="DIC_kwDOERChOc4CV9kF"
-                        data-mapping="pathname"
-                        data-reactions-enabled="1"
-                        data-emit-metadata="0"
-                        data-input-position="top"
-                        :data-theme="commentsTheme"
-                        data-lang="en"
-                        crossorigin="anonymous"
-                        data-loading="eager"
-                        async
+                    v-if="renderComments"
+                    :is="'script'"
+                    src="https://giscus.app/client.js"
+                    data-repo="nhmeow/nhmeow-blog"
+                    data-repo-id="MDEwOlJlcG9zaXRvcnkyODYzMDI1MjE="
+                    data-category="Announcements"
+                    data-category-id="DIC_kwDOERChOc4CV9kF"
+                    data-mapping="pathname"
+                    data-reactions-enabled="1"
+                    data-emit-metadata="0"
+                    data-input-position="top"
+                    :data-theme="commentsTheme"
+                    data-lang="en"
+                    crossorigin="anonymous"
+                    data-loading="eager"
+                    async
                 >
                 </component>
             </div>
@@ -46,13 +48,10 @@
 <script setup lang="ts">
 import moment from 'moment'
 import {computed, ref, toRefs, watch} from "vue";
-import {usePagesData, pageData, useRouteLocale, useSiteLocaleData, usePageFrontmatter} from "@vuepress/client";
-import {useThemeLocaleData} from "@vuepress/theme-default/lib/client/index";
+import {usePageData, usePageFrontmatter, useRouteLocale} from "vuepress/client";
 
-const themeLocaleData = useThemeLocaleData();
 const pageFrontmatter = usePageFrontmatter();
-const pagesData = usePagesData();
-const siteLocaleData = useSiteLocaleData();
+const pageData = usePageData();
 const routeLocale = useRouteLocale();
 
 const props = defineProps({
