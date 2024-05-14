@@ -6,6 +6,7 @@ import {themeDataPlugin} from "@vuepress/plugin-theme-data"
 import anchor from "markdown-it-anchor"
 import {feedPlugin} from "@vuepress/plugin-feed"
 import {blogPlugin} from '@vuepress/plugin-blog'
+import {commentPlugin} from '@vuepress/plugin-comment'
 
 export default defineUserConfig({
     title: 'Barren Cat',
@@ -127,6 +128,19 @@ export default defineUserConfig({
                     }),
                 },
             ],
+        }),
+        commentPlugin({
+            provider: 'Giscus',
+            repo: 'nhmeow/nhmeow-blog',
+            repoId: 'MDEwOlJlcG9zaXRvcnkyODYzMDI1MjE=',
+            category: 'Announcements',
+            categoryId: 'DIC_kwDOERChOc4CV9kF',
+            mapping: 'pathname',
+            reactionsEnabled: true,
+            inputPosition: 'top',
+            lazyLoading: true,
+            lightTheme: 'preferred_color_scheme',
+            darkTheme: 'dark_dimmed',
         }),
     ],
     markdown: {

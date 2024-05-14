@@ -1,7 +1,7 @@
 ---
 title: Build
 lang: en-US
-comments: false
+comment: false
 showMeta: false
 permalinkPattern: null
 ---

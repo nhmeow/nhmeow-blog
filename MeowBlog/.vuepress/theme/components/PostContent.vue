@@ -19,25 +19,7 @@
                     <span><a href="#comments">Comments</a></span>
                     <span class="comments-tips">Please describe rationally</span>
                 </h3>
-                <component
-                    v-if="renderComments"
-                    :is="'script'"
-                    src="https://giscus.app/client.js"
-                    data-repo="nhmeow/nhmeow-blog"
-                    data-repo-id="MDEwOlJlcG9zaXRvcnkyODYzMDI1MjE="
-                    data-category="Announcements"
-                    data-category-id="DIC_kwDOERChOc4CV9kF"
-                    data-mapping="pathname"
-                    data-reactions-enabled="1"
-                    data-emit-metadata="0"
-                    data-input-position="top"
-                    :data-theme="commentsTheme"
-                    data-lang="en"
-                    crossorigin="anonymous"
-                    data-loading="eager"
-                    async
-                >
-                </component>
+                <CommentService :darkmode="mode === 'dark'"/>
             </div>
         </article>
 
@@ -47,7 +29,7 @@
 
 <script setup lang="ts">
 import moment from 'moment'
-import {computed, ref, toRefs, watch} from "vue";
+import {computed, toRefs} from "vue";
 import {usePageData, usePageFrontmatter, useRouteLocale} from "vuepress/client";
 
 const pageFrontmatter = usePageFrontmatter();
@@ -66,36 +48,6 @@ const {mode} = toRefs(props);
 const postTime = computed(() => {
     return moment(pageFrontmatter.value.date).format('YYYY-MM-DD')
 })// 计算属性的 getter
-
-const commentsTheme = computed(() => {
-    return mode?.value === "dark" ? 'dark_dimmed' : 'preferred_color_scheme'
-})// 计算属性的 getter
-
-const renderComments = ref(true)
-
-const refreshComments = () => {
-    renderComments.value = false
-    setTimeout(() => {
-        renderComments.value = true
-    }, 100)
-}
-
-// watch route change to refresh comments
-watch(
-    () => pageData.value.path,
-    refreshComments,
-    {
-        immediate: true
-    }
-)
-// watch mode change to refresh comments
-watch(
-    () => mode?.value,
-    refreshComments,
-    {
-        immediate: true
-    }
-)
 
 </script>
 
@@ -127,4 +79,11 @@ watch(
 .mode-dark .comments .comments-tips {
     color: white;
 }
+
+.comments #vp-comment {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
 </style>
