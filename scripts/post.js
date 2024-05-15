@@ -1,6 +1,8 @@
-const readline = require('readline')
-const fs = require('fs')
-const moment = require('moment')
+import readline from 'readline'
+import fs from 'fs'
+import moment from 'moment'
+
+const dirname = import.meta.dirname
 
 function read(query) {
     return new Promise((resolve) => {
@@ -23,7 +25,7 @@ function newPost(name, title, locale) {
     const date = moment().format('YYYY-MM-DD')
     const localeDir = locale === '' ? '/' : `/${locale}/`
     const localeTag = locale === '' ? '' : `_${locale}`
-    const filename = `${__dirname}/..${localeDir}posts/${date}-${name.replace(' ', '-')}.md`
+    const filename = `${dirname}/../MeowBlog${localeDir}posts/${date}-${name.replace(' ', '-')}.md`
     const template = `---
 title: ${title}
 date: ${date}

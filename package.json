@@ -17,7 +17,8 @@
     "build": "vuepress build MeowBlog",
     "clean-dev": "vuepress dev MeowBlog --clean-cache",
     "dev": "vuepress dev MeowBlog",
-    "update-package": "pnpm dlx vp-update"
+    "update-package": "pnpm dlx vp-update",
+    "post": "node ./scripts/post.js"
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.9",
@@ -29,14 +30,12 @@
     "@vuepress/theme-default": "2.0.0-rc.28",
     "autoprefixer": "^10.4.19",
     "markdown-it-anchor": "^8.6.7",
+    "moment": "^2.30.1",
     "stylus": "^0.63.0",
     "tailwindcss": "^3.4.3",
     "vue": "^3.4.27",
     "vue-router": "^4.3.2",
     "vuepress": "2.0.0-rc.9"
   },
-  "packageManager": "pnpm@9.1.0+sha1.217063ce3fcbf44f3051666f38b810f1ddefee4a",
-  "dependencies": {
-    "moment": "^2.30.1"
-  }
+  "packageManager": "pnpm@9.1.0+sha1.217063ce3fcbf44f3051666f38b810f1ddefee4a"
 }
