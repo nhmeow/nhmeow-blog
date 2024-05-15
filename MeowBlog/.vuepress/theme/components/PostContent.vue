@@ -14,7 +14,7 @@
                 </div>
             </header>
             <Content class="content"/>
-            <div v-if="pageFrontmatter.comments !== false" class="comments">
+            <div v-if="pageFrontmatter.comment !== false" class="comments">
                 <h3 id="comments">
                     <span><a href="#comments">Comments</a></span>
                     <span class="comments-tips">Please describe rationally</span>
